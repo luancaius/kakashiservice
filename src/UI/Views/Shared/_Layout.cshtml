@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kakashi Service@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" >
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/fine-uploader.css" rel="stylesheet" />
+    <meta name="description" content="Kakashi Service UI" />
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h2>Kakashi Service</h2>
+    </div>
+    @RenderBody()
+    <div class="loader hidden"></div>
+</div>
+
+    <script>
+    @{
+        var urlRoot = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + Url.Content("~");
+        urlRoot = !string.IsNullOrWhiteSpace(urlRoot) && urlRoot.EndsWith("/") ? urlRoot.Remove(urlRoot.Length - 1) : urlRoot;
+    }
+    var urlRoot = '@urlRoot';
+    </script>
+    <script src="~/Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Global.js"></script>
+    @RenderSection("scripts")
+</body>
+</html>
