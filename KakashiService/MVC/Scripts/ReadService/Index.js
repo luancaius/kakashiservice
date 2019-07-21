@@ -1,6 +1,4 @@
-﻿/// <reference path="C:\Users\Kabulouzo\Source\Repos\KakashiService\src\VS2015\UI\Content/fineUploader/templates/default.html" />
-/// <reference path="C:\Users\Kabulouzo\Source\Repos\KakashiService\src\VS2015\UI\Content/fineUploader/templates/default.html" />
-(function () {
+﻿(function () {
     $('#btnForm').click(SubmitForm);
     UploadFile();
 })();
